@@ -1,12 +1,13 @@
 /* Variables */
 :root{
-    --bg-color: #F3E9DD;
     --pink: rgb(250, 220, 228);
     --orange: #E8A673;
     --red: #FC6D44;
     --black: rgb(46, 46, 46);
     --blue: rgb(9, 128, 254);
 }
+
+
 /* Header */
 header {
   width: 100%;
@@ -37,7 +38,7 @@ header > nav ul a::after{
     width: 0;
     height: 2px;
     position: absolute;
-    background: var(--black);
+    background: var(--red);
     transition: width .3s;
     bottom: -4px;
     left: 0;
@@ -48,4 +49,40 @@ header > nav ul a:hover::after{
 header > nav h1{
     text-transform: uppercase;
     font-size: 3rem;
+}
+
+/* Sections */
+section.container{
+    width: 90%;
+    max-width: 1200px;
+    margin: auto;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+section.container h2{
+    width: 20%;
+    font-size: 2rem;
+    color: var(--black);
+    text-align: right;
+    position: relative;
+    padding-right: 2rem;
+}
+
+section.container h2::after{
+    content: '';
+    width: 2px;
+    height: 100%;
+    background: var(--red);
+    position: absolute;
+    right: 0;
+    top: 0;
+}
+section.container .col-7{
+    width: calc(80% - 2rem);
+}
+p.col-7{
+    line-height: 1.8;
 }
